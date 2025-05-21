@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": ["${workspaceFolder}"],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder};${env:PYTHONPATH}",
+        "PATH": "${workspaceFolder};${env:PATH}"
+    },
+    "idf.pythonInstallPath": "C:\\Users\\alumno\\.espressif\\tools\\idf-python\\3.11.2\\python.exe"
+}

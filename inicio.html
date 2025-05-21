@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Juego Trivia Películas</h1>
+    <p>Este es un juego sencillo donde se pondrá a prueba tu conocimiento sobre películas.</p>
+    <p>Se presentará una frase en particular y vas a tener que elegir de entre 3 opciones a cual película pertenece.</p>
+    <p>Para empezar ingresá tu nombre y la cantidad de películas que queres adivinar y después dale click a Iniciar Trivia</p>
+    <form action="{{ url_for('inicio') }}" method="post">
+        <label for="id_nombre_usuario">Nombre de Usuario:</label>
+        <input type="text" id="id_nombre_usuario" name="nombre_usuario" required>
+        <br>
+        <label for="id_nro_iteraciones">Número de preguntas :</label>
+        <input type="number" id="id_nro_iteraciones" name="name_nro_iteraciones" min="3" max="10" value="1" required>
+        <br>
+        <button type="submit">Iniciar Trivia</button>
+    </form>
+    <form action="{{ url_for('lista_peliculas') }}" method="get">
+        <button type="submit">Ver lista de peliculas</button>
+    </form>
+    <form action="{{ url_for('puntaje') }}" method="get">
+        <button type="submit">Ver Historial de Partidas</button>
+    </form>
+</body>
+</html>
+
+
