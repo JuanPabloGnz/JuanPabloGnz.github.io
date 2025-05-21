@@ -2,31 +2,79 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación Flask</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>CV - Juan Pablo González</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1, h2 { color: #2E4053; }
+        h1 { text-align: center; }
+        .center { text-align: center; }
+        .section { margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    </style>
 </head>
 <body>
-    <h1>Juego Trivia Películas</h1>
-    <p>Este es un juego sencillo donde se pondrá a prueba tu conocimiento sobre películas.</p>
-    <p>Se presentará una frase en particular y vas a tener que elegir de entre 3 opciones a cual película pertenece.</p>
-    <p>Para empezar ingresá tu nombre y la cantidad de películas que queres adivinar y después dale click a Iniciar Trivia</p>
-    <form action="{{ url_for('inicio') }}" method="post">
-        <label for="id_nombre_usuario">Nombre de Usuario:</label>
-        <input type="text" id="id_nombre_usuario" name="nombre_usuario" required>
-        <br>
-        <label for="id_nro_iteraciones">Número de preguntas :</label>
-        <input type="number" id="id_nro_iteraciones" name="name_nro_iteraciones" min="3" max="10" value="1" required>
-        <br>
-        <button type="submit">Iniciar Trivia</button>
-    </form>
-    <form action="{{ url_for('lista_peliculas') }}" method="get">
-        <button type="submit">Ver lista de peliculas</button>
-    </form>
-    <form action="{{ url_for('puntaje') }}" method="get">
-        <button type="submit">Ver Historial de Partidas</button>
-    </form>
+    <h1>Juan Pablo González</h1>
+    <p class="center"><strong>Data Analyst | ETL | Web Scraping | SQL | Python | R | Power BI | Marketing</strong></p>
+    <p class="center">juan.gonzalez@ingenieria.uner.edu.ar | +54 0343 156214688</p>
+
+    <div class="section">
+        <h2>Perfil</h2>
+        <p>
+            Data and Marketing Technician with professional internship experience at the General Council of Education of Entre Ríos (2024). 
+            Strong analytical skills, data management expertise, and bilingual communication abilities (Spanish and conversational English).
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Experiencia Profesional</h2>
+        <h3>Data Analyst Technician</h3>
+        <em>General Council of Education of Entre Ríos, 2024</em>
+        <ul>
+            <li>Developed dashboards (Looker Studio) tracking enrollment and performance metrics for primary schools.</li>
+            <li>Queried the Educational Management Administration System database using Microsoft SQL Server.</li>
+            <li>Built ETL pipelines (Google Colab) to clean and process data for dashboard automation.</li>
+        </ul>
+
+        <h3>Digital Marketing Assistant</h3>
+        <em>AV Consultora, April 2021 - December 2021</em>
+        <ul>
+            <li>Processed customer satisfaction survey data and managed social media accounts.</li>
+            <li>Executed email marketing campaigns and negotiated ad placements.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Educación</h2>
+        <table>
+            <tr>
+                <th>Formación</th>
+                <th>Institución</th>
+                <th>GPA</th>
+            </tr>
+            <tr>
+                <td>Data Processing & Analysis Technician (2022–2024)</td>
+                <td>National University of Entre Ríos</td>
+                <td>8.25</td>
+            </tr>
+            <tr>
+                <td>Marketing Technician (2018–2022)</td>
+                <td>Autonomous University of Entre Ríos</td>
+                <td>8.30</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Habilidades Técnicas</h2>
+        <ul>
+            <li>SQL, Python, R, Power BI, Looker Studio</li>
+            <li>ETL, Web Scraping, Google Colab</li>
+            <li>Marketing Digital, Redes Sociales, Email Marketing</li>
+        </ul>
+    </div>
 </body>
+</html>
 </html>
 
 
